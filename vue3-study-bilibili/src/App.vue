@@ -1,19 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <div class="app-wrapper">
+    <router-view></router-view>
+  </div>
 </template>
 
-<script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
+<script lang="ts">
+import { defineComponent, provide, reactive, ref, readonly } from "vue";
+
+export default defineComponent({
+  setup() {},
+});
 </script>
 
-<style>
+<style lang="scss" scoped>
+.app-wrapper {
+  width: 100%;
+  height: 100%;
+}
+</style>
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
 }
 </style>
