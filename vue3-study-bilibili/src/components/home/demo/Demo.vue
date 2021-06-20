@@ -13,16 +13,20 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, defineAsyncComponent } from "vue";
 import Child1 from './Child1.vue';
-import DSlot from './DSlot.vue';
 
 export default defineComponent({
-  components: {Child1,DSlot},
+  components: {Child1,DSlot: defineAsyncComponent(() => import('./DSlot.vue'))},
   data() {
     return {
       pageName: 'demo',
       bookTitle: 'sitongna'
+    }
+  },
+  provide() {
+    return {
+      len: this.pageName.length
     }
   },
   setup() {},
