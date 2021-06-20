@@ -3,22 +3,22 @@
     <div>demo-page</div>
     <!-- <Child1 class="child1" v-model.capitalize="bookTitle" @change="onChange"></Child1>
     <div>{{bookTitle}}</div> -->
-    <Child2>
+    <DSlot>
       <template #header="slopProps">
       <div>{{slopProps.title}}</div>
       </template>
       <template #default><div>main</div></template>
       <template #footer><div>footer</div></template>
-    </Child2>
+    </DSlot>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import Child1 from './Child1.vue';
-import Child2 from './Child2.vue';
+import DSlot from './DSlot.vue';
 
 export default defineComponent({
-  components: {Child1,Child2},
+  components: {Child1,DSlot},
   data() {
     return {
       pageName: 'demo',
