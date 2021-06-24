@@ -40,17 +40,20 @@ export default defineComponent({
   border-right: 1px solid #ddd;
   @include verticalOverflow;
 }
+.item {
+    display: block;
+    line-height: 24px;
+    color: #333;
+    &.router-link-active {
+      color: orange;
+    }
+  }
 .content {
   flex-grow: 1;
   height: 100%;
   padding: 10px;
   @include verticalOverflow;
 
-  .item {
-    color: #333;
-    &.router-link-active {
-      color: #000;
-    }
-  }
+
 }
 </style>

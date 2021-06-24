@@ -49,6 +49,18 @@ export default defineComponent({
   updated() {
     console.log("updated");
   },
+  renderTracked({key, target, type}) {
+    console.log('---------------')
+    console.log('tracked')
+    console.log(key, target, type)
+    console.log('---------------')
+  },
+  renderTriggered({key, target, type}) {
+    console.log('---------------')
+    console.log('triggered')
+    console.log(key, target, type)
+    console.log('---------------')
+  },
   methods: {
     // onChange() {
     //   this.obj.name = "sitongna";
